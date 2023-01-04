@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <!-- Meta Tags -->
+    
+    <meta content="width=device-width, initial-scale=1, shrink-to-fit=no" name="viewport">
+    <!-- Page Title -->
+    <title> 就业与经济</title>
+    <!-- Bundle -->
+    <link rel="stylesheet" href="./css/bundle.min.css">
+    <!-- Plugin Css -->
+    <link href="./css/LineIcons.min.css" rel="stylesheet">
+    <link href="./css/jquery.fancybox.min.css" rel="stylesheet">
+    <link href="./css/owl.carousel.min.css" rel="stylesheet">
+    <link href="./css/wow.css" rel="stylesheet">
+    <link rel="stylesheet" href="./css/cubeportfolio.min.css">
+    <link href="./css/line-awesome.min.css" rel="stylesheet">
+    <!-- Style Sheet -->
+    <link href="./css/style.css" rel="stylesheet">
+    <link href="./css/custom.css" rel="stylesheet">
+    <!-- JavaScript -->
+    <script src="./js/bundle.min.js"></script>
+    <!-- Plugin Js -->
+    <script src="./js/jquery.appear.js"></script>
+    <script src="./js/jquery.fancybox.min.js"></script>
+    <script src="./js/owl.carousel.min.js"></script>
+    <script src="./js/wow.min.js"></script>
+    <script src="./js/jquery.cubeportfolio.min.js"></script>
+    <!-- CUSTOM JS -->
+    <script src="./js/contact_us.js"></script>
+    <script src="./js/script.js"></script>
+    <!-- ECHARTS JS -->
+    <script src="./js/echarts.min.js"></script>
+    <script src="./js/purple-passion.js"></script>
+    <script src="./js/vintage.js"></script>
+    <script src="./js/jquery.js"></script>
+</head>
+
+<!-- Start 头部 -->
+<body><header>
+    <!--Navigation（导航）-->
+    <nav class="navbar navbar-top-default navbar-expand-lg navbar-simple nav-line">
+        <a href="javascript:void(0)" class="sidemenu_btn" id="sidemenu_toggle">
+            <span></span>
+            <span></span>
+            <span></span>
+        </a>
+        <div class="container-fluid">
+            <!--Nav Links(导航链接)-->
+            <div class="collapse navbar-collapse " id="megaone">
+                <div class="navbar-nav mr-auto">
+                   <a class="nav-link scroll" href="index.html">首页</a>
+                   <a class="nav-link scroll" href="page0.html">考研</a>
+                   <a class="nav-link scroll" href="page.html">恋爱</a>
+                   <a class="nav-link scroll" href="page1.html">就业与经济</a>
+                </div>
+            </div>
+    </div></nav>
+</header>
+<!-- End 头部 -->
+
+<!-- Start 第4部分 -->
+<section id="第4部分" style="height: 800px;background-color: rgb(170, 170, 255);">
+ <!-- 准备盒子 -->
+ <div id="main3" style="width: 90%; height: 600px; background-color: rgb(170, 255, 255); border-radius: 30px; position: absolute; left: 50px; user-select: none; -webkit-tap-highlight-color: rgba(0, 0, 0, 0);" _echarts_instance_="ec_1672767409448"><div style="position: relative; width: 600px; height: 600px; padding: 0px; margin: 0px; border-width: 0px; cursor: default;"><canvas data-zr-dom-id="zr_0" width="750" height="750" style="position: absolute; left: 0px; top: 0px; width: 600px; height: 600px; user-select: none; -webkit-tap-highlight-color: rgba(0, 0, 0, 0); padding: 0px; margin: 0px; border-width: 0px;"></canvas></div></div>
+<img src="./images/工作.jpg" width="200px" style="border-radius: 200px;margin-top: 250px;position: absolute;margin-left: 200px;">
+<img src="./images/经济.jpg" width="200px" style="border-radius: 200px;margin-top: 250px;position: absolute;margin-left: 1100px;">
+ <script>
+   // 初始化实例对象
+   var myChart3 = echarts.init(document.getElementById('main3'));
+   // 指定图表的配置项和数据
+   var option3 = {
+    title: {
+           text: '就业与经济',
+		   subtext:'就业情况：从数据中可以看出，由于大环境的影响，大部分大学生存在专业不对口现象偏多，毕业人数多，就业压力大。经济情况：从数据中可以看出，毕业生的工作薪资集中在中间的范围，经济花费主要有：吃饭、购物、娱乐、住房等。',
+           left:'center',
+           top:20
+               },
+    legend: {
+           data: ['就业情况', '经济情况'],
+           orient:'v',
+           left:30,
+           top:'center'
+              },
+    radar: {
+      shape: 'circle',
+      center:['55%','55%'],
+      indicator: [
+         { name: '单位就业（%）', max: 100 },
+         { name: '自由职业（%）', max: 500 },
+         { name: '创业（%）', max: 100 },
+         { name: '月均收入1000-1500（%）', max: 100 },
+         { name: '月均收入1500-2000（%）', max: 100 },
+         { name: '月均收入2000-3000（%）', max: 100 }
+         ]
+      },
+    series: [
+     {
+      
+      type: 'radar',
+      data: [
+        {
+          value: [56.9, 15.8, 1.4, 36.2, 31.3, 16.4],
+          
+        },
+        {
+          value: [50.4, 18.6, 1.9, 12.8, 3.3, 5.27],
+          
+        }
+      ],
+      label:{
+        show:true
+      },
+      lineStyle:{
+        width:9
+      },
+     
+    },
+    
+  ]
+   };
+   // 使用刚指定的配置项和数据显示图表。
+   myChart3.setOption(option3);
+
+   // 初始化实例对象
+   var myChart4 = echarts.init(document.getElementById('main4'));
+   
+    $.get('',function(geoJson) {
+        echarts.registerMap()
+        var option4={
+      title:{
+        
+        left:'center',
+        top:30
+      },
+       series: 
+         {
+            type: 'map',
+            
+            }
+       };
+      
+   // 使用刚指定的配置项和数据显示图表。
+   myChart4.setOption(option4);
+      })
+ </script>
+</section>
+<!-- End 第4部分 -->
+
+
+</body></html>
